@@ -1,1 +1,0 @@
-print(ord('а') - ord('a'), ord('А') - ord('A'))
