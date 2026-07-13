@@ -1,28 +1,14 @@
-def f(a):
-    cnt = 0
-    for i in range(2, int(a**0.5)+ 1):
-        if a % i == 0:
-            return False
-    return True
-def r(a):
-    if '67' in str(a) and str(a).count('67') == 1:
-        return True
-    else:
-        return False
-
-N = 2_626_695_891
-n = N + 1
-
-cnt = 0
-while cnt < 5:
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            s1 = i
-            s2 = n // i
-            if f(s1) and f(s2) and r(s1) and r(s2):
-                cnt += 1
-                print(n, min(s1, s2))
-                break
-    n += 1
-
-
+def F(a):
+    m = a
+    for d in range(2, 1+round(a**0,5)):
+        if a %d == 0 and d% 10 == 7 and d != 7:
+            m = min(m, d)
+        if a % d == 0 and (a // d) % 10 == 7 and (a // d) != 7:
+            m = min(m, a // d)
+        return m
+x, k = 700_000, 0
+while k < 5:
+    x += 1
+    if F(x) < x:
+        print(x, F(x), sep='t')
+        k += 1
