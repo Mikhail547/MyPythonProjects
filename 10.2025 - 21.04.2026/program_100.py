@@ -1,0 +1,8 @@
+n = input()
+print(len(n))
+print(n * 3)
+print(n[0])
+print(n[:3])
+print(n[-3:])
+print(n[::-1])
+print(n[1:-1])

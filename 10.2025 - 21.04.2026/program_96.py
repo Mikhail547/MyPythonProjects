@@ -1,0 +1,6 @@
+s = [1,2,3,4,5].__iter__()
+print(next(s))
+print(next(s))
+print(next(s))
+print(next(s))
+print(next(s))

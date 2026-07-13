@@ -1,0 +1,1 @@
+with open('point.txt'):
