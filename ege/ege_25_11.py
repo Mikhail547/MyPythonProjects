@@ -5,7 +5,7 @@ def F(x):
     s  = set() # множество простых делителей числа
     for d in range(2, isqrt(x) + 1):
         if x % d == 0: # удобная проверка делителя и частного на простоту
-            if P(d) and str(d).count('16') == 1 and  P(x//d) and str(x//d).count('16') == 1 and x == d * (x//d):
+            if P(d) and str(d).count('16') == 1 and  P(x//d) and str(x//d).count('16') == 1:
                 s.add(d)
                 s.add(x//d)
     if len(s) > 0:
